@@ -8,13 +8,13 @@ class ReadText {
         const __dirname = dirname(__filename);
         const pathFile = join(__dirname, "./mockText.txt");
 
-        return pathFile
+        return pathFile;
     }
 
     static async readPath() {
         const text = await readFile(this.getPath(), 'utf-8');
 
-        return text;
+        return text.split(',');
     }
 }
 
@@ -22,6 +22,7 @@ class ReadText {
 const reading = await ReadText.readPath();
 
 console.log(reading)
+
 
 // function textFile (filePath) {
 //     const
